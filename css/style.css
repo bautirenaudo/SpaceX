@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+
+body{
+
+}
+
+#conteiner{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgb(1, 0, 30) -20%, rgb(1, 0, 15)  80%);
+}
+#conteiner::after{
+    content:"";
+    display: grid;
+    place-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+#circle-earth{
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image:url("https://ichef.bbci.co.uk/news/800/cpsprodpb/ABE0/production/_103800044_fig_13_globaldem-ohne-legende_16-9.jpg") ;
+    background-position: 0%;
+    animation: girar 10s linear infinite;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 10px 10px 100px 10px black;
+    border: 2px solid black;
+
+
+}
+#circle-earth::after{
+    content:"";
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    background: linear-gradient(rgba(255, 255, 255, 0) ,rgba(0, 0, 0, .96) 80%);
+}
+@keyframes girar {
+    from{
+       background-position: 0%;
+    }
+    to{
+        background-position: 133%;
+    }
+}
+
+
+#stars{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#stars #sun{
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 200px 150px rgb(241, 241, 146);
+    border-radius: 50%;
+    background-color: rgb(255, 255, 0);
+    top: -20px;
+    left: -20px;
+}
+#stars .star{
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(219, 219, 219);
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 1px white;
+    margin-left : 200px;
+    margin-top: 50px;
+}
+#star1,#star2,#star3,#star4,#star5{
+    animation: titilar1 2s  infinite;
+}
+#star6,#star7,#star8,#star9,#star10{
+    animation: titilar2 2s infinite;   
+}
+#star1{
+    top: 100px;
+    left: 300px;
+}
+#star2{
+    top: 350px;
+    left: 150px;
+}
+#star3{
+    top: 700px;
+    left: 300px;
+}
+#star4{
+    top: 20px;
+    left: 1000px;
+}
+#star5{
+    top: 500px;
+    left: 1300px;
+}
+#star6{
+    top: 200px;
+    left: 1400px;
+}
+#star7{
+    top: 20px;
+    left: 800px;
+}
+#star8{
+    top: 600px;
+    left: 600px;
+}
+#star9{
+    top: 500px;
+    left: 1000px;
+}
+#star10{
+    top: 120px;
+    left: 520px;
+}
+
+@keyframes titilar1 {
+    from{
+        box-shadow: 0px 0px 5px 5px white;
+    }
+    85%{
+        box-shadow: 0px 0px 3px 1px white;
+    }
+    to{
+        box-shadow: 0px 0px 5px 5px white;
+    }
+}
+@keyframes titilar2 {
+    from{
+        box-shadow: 0px 0px 7px 8px white;
+    }
+    60%{
+        box-shadow: 0px 0px 2px 2px white;
+    }
+    to{
+        box-shadow: 0px 0px 7px 8px white;
+    }
+}
+
+
+@media screen and (max-width:450px){
+
+    #stars .star{
+        display: block;
+        position: fixed;
+        width: 5px;
+        height: 5px;
+        background-color: rgb(219, 219, 219);
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px 1px white;
+        margin-left : -200px;
+        margin-top:200px;
+    }
+    #star1,#star2,#star3,#star4,#star5{
+        animation: titilar1 2s  infinite;
+    }
+    #star6,#star7,#star8,#star9,#star10{
+        animation: titilar2 2s infinite;   
+    }
+    #star1{
+        top: 100px;
+        left: 300px;
+    }
+    #star2{
+        top: 350px;
+        left: 150px;
+    }
+    #star3{
+        top: 300px;
+        left: 250px;
+    }
+    #star4{
+        top: 450px;
+        left: 320px;
+    }
+    #star5{
+        top: -190px;
+        left: 590px;
+    }
+    #star6{
+        top: -50px;
+        left: 500px;
+    }
+    #star7{
+        top: 600px;
+        left: 500px;
+    }
+    #star8{
+        top: 550px;
+        left: 250px;
+    }
+    #star9{
+        top: 480px;
+        left: 500px;
+    }
+    #star10{
+        top: 120px;
+        left: 520px;
+    }
+
+}
