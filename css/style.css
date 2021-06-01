@@ -197,7 +197,14 @@ body{
 }
 
 
-@media screen and (max-width:450px){
+@media screen and (max-width:460px){
+
+    #start{
+
+    }
+    #start p{
+        font-size: 20px;
+    }
 
     #stars .star{
         display: block;
